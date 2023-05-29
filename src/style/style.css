@@ -1,0 +1,252 @@
+/* Cores e fontes usadas */
+
+:root {
+    --cor-primaria: #25995C;
+    --cor-branca: #ffffff;
+    --cor-fonte-title: #4b4b4b;
+    --cor-fonte-text: #646464;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--cor-background);
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Nav !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+nav {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    z-index: -1;
+}
+
+.nav_left>img{
+    height: 60px;
+}
+
+.nav_rigth_icones ul{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap:10px;
+}
+
+.nav_rigth_icones ul li{
+    font-size: 1.2em;
+    margin: 10px;
+    color: var(--cor-branca);    
+}
+nav a{
+    color:var(--cor-branca);
+}
+nav a:hover {
+    color: #ccc;
+}
+
+/* Menu !!!!!!!!!!!!!!!!!!!!!!! */
+
+.container_menu{
+    background-image: url(../img/plantio.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.titulo_menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.titulo_menu h1{
+    font-weight: 400;
+    font-size: 4.2em;
+    line-height: 97px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--cor-branca);
+    text-align: center;
+    margin: 80px 20px;
+}
+
+/* Seção  01 */
+
+.container01{
+    background-color: var(--cor-branca);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.container01 h1{
+    font-size: 2.5em;
+    color: var(--cor-primaria);
+}
+
+.container01 p{
+    color: var(--cor-fonte-text);
+    font-size: 1.4em;
+    margin: 10px 200px;
+}
+
+/* Seção 02 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.container02{
+    background-color: var(--cor-primaria);
+    height: 100vh;
+   
+}
+.container02 h1{
+    font-size: 2.5em;
+    color: var(--cor-branca);
+    text-align: center;
+    margin: 40px;
+    padding: 40px;
+}
+
+.container02 div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container02 div p{
+    color: var(--cor-branca);
+    font-size: 1.4em;
+    margin: 10px 50px;
+}
+/* Seão 03 !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.container03{
+    background-color: var(--cor-branca);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+.container04 h1{
+    font-size: 2.5em;
+    color: var(--cor-primaria);
+    text-align: center;
+    margin: 40px;
+    padding: 40px;
+}
+.container04 ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px 200px;
+}
+.container04 ul li{
+    background-color: var(--cor-primaria);
+    padding: 50px;
+}
+
+.container04 ul li p{
+    color: var(--cor-branca);
+    font-size: 1.5em;
+}
+/* Seção 04 !!!!!!!!!!!!!!!!!!!!!!!! */
+.container04{
+    background-color: var(--cor-branca);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Seção 05 !!!!!!!!!!!!!!!!!!!!! */
+.container05{
+    background-color: var(--cor-branca);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Seção 06 !!!!!!!!!!!!!!!!!!!!!!! */
+.container06{
+    background-color: var(--cor-branca);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Footer !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+footer {
+    background-color: black;
+    padding: 20px;
+    color: var(--cor-branca);
+}
+
+.footer-section img {
+    width: 220px;
+    height: 170px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    color: var(--cor-fonte-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: var(--cor-fonte-text);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--cor-fonte-text);
+}
