@@ -3,6 +3,7 @@
 :root {
     --cor-primaria: #25995C;
     --cor-branca: #ffffff;
+    --cor-back-secundario: #f5f5f5;
     --cor-fonte-title: #4b4b4b;
     --cor-fonte-text: #646464;
 }
@@ -16,7 +17,7 @@
 }
 
 body {
-    background-color: var(--cor-background);
+    background-color: var(--cor-branca);
     max-width: 100%;
     margin: 0 auto;
     font-family: "Inter", sans-serif;
@@ -61,7 +62,7 @@ nav a:hover {
 /* Menu !!!!!!!!!!!!!!!!!!!!!!! */
 
 .container_menu{
-    background-image: url(../img/plantio.jpg);
+    background-image: url(../img/img-fundo-smartgrow.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -89,12 +90,13 @@ nav a:hover {
 
 .container01{
     background-color: var(--cor-branca);
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     gap: 10px;
+    flex-wrap: wrap;
+    padding: 40px;
 }
 
 .container01 h1{
@@ -107,24 +109,50 @@ nav a:hover {
     font-size: 1.4em;
     margin: 10px 200px;
 }
+.container01 div ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+.container01 div ul li{
+    padding: 20px;
+}
+.container01 div i{
+    color: var(--cor-primaria);
+    font-size: 2.5em;
+}
+.container01 div h3{
+    font-size: 2em;
+    color:var(--cor-primaria);
+}
+.container01 div p{
+    color: var(--cor-fonte-text);
+    font-size: 1.4em;
+    margin: 10px 20px;
+    padding: 20px;
+
+}
 
 /* Seção 02 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .container02{
     background-color: var(--cor-primaria);
-    height: 100vh;
+    padding: 50px;
    
 }
 .container02 h1{
     font-size: 2.5em;
     color: var(--cor-branca);
     text-align: center;
-    margin: 40px;
-    padding: 40px;
+    padding: 20px;
 }
 
 .container02 div{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container02 div p{
@@ -132,21 +160,35 @@ nav a:hover {
     font-size: 1.4em;
     margin: 10px 50px;
 }
+.container02 div video{
+    margin: 0px 50px;
+}
 /* Seão 03 !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .container03{
     background-color: var(--cor-branca);
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
+/* Seção 04 !!!!!!!!!!!!!!!!!!!!!!!! */
+.container04{
+    background-color: var(--cor-branca);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
 .container04 h1{
     font-size: 2.5em;
     color: var(--cor-primaria);
     text-align: center;
-    margin: 40px;
     padding: 40px;
 }
 .container04 ul {
@@ -165,17 +207,6 @@ nav a:hover {
     color: var(--cor-branca);
     font-size: 1.5em;
 }
-/* Seção 04 !!!!!!!!!!!!!!!!!!!!!!!! */
-.container04{
-    background-color: var(--cor-branca);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-}
-
 /* Seção 05 !!!!!!!!!!!!!!!!!!!!! */
 .container05{
     background-color: var(--cor-branca);
@@ -189,18 +220,70 @@ nav a:hover {
 
 /* Seção 06 !!!!!!!!!!!!!!!!!!!!!!! */
 .container06{
-    background-color: var(--cor-branca);
-    height: 100vh;
+    background-color: var(--cor-primaria);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     gap: 10px;
+    padding: 60px;
+}
+
+.colorful-form {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--cor-back-secundario);
+  border-radius: 10px;
+}
+.colorful-form h1{
+    color: var(--cor-fonte-title);
+    padding: 30px;
+    text-align: center;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--cor-fonte-title);
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: var(--cor-branca);
+  color: var(--cor-fonte-text);
+  border-radius: 5px;
+}
+
+textarea.form-input {
+  height: 100px;
+}
+
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: var(--cor-branca);
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
 }
 
 /* Footer !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-
 
 footer {
     background-color: black;
