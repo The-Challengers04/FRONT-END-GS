@@ -14,6 +14,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -170,12 +171,27 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    padding: 40px;
+}
+
+.container03 h1{
+    font-size: 2.5em;
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 40px;
+}
+.container03 p{
+    color: var(--cor-fonte-text);
+    font-size: 1.4em;
+    margin: 10px 20px;
+    padding: 20px;
 }
 /* Seção 04 !!!!!!!!!!!!!!!!!!!!!!!! */
 .container04{
-    background-color: var(--cor-branca);
+    background-color: var(--cor-primaria);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -187,7 +203,7 @@ nav a:hover {
 
 .container04 h1{
     font-size: 2.5em;
-    color: var(--cor-primaria);
+    color: var(--cor-branca);
     text-align: center;
     padding: 40px;
 }
@@ -199,25 +215,28 @@ nav a:hover {
     margin: 5px 200px;
 }
 .container04 ul li{
-    background-color: var(--cor-primaria);
-    padding: 50px;
+    background-color: var(--cor-branca);
+    padding: 40px;
 }
 
 .container04 ul li p{
-    color: var(--cor-branca);
+    color: var(--cor-fonte-text);
     font-size: 1.5em;
 }
 /* Seção 05 !!!!!!!!!!!!!!!!!!!!! */
 .container05{
     background-color: var(--cor-branca);
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 10px;
+    align-items: center;
+    gap:10px;
+    padding: 40px;
 }
-
+.container05{
+    color: var(--cor-fonte-text);
+}
 /* Seção 06 !!!!!!!!!!!!!!!!!!!!!!! */
 .container06{
     background-color: var(--cor-primaria);
