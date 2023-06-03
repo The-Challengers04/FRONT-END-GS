@@ -126,6 +126,13 @@ const phoneInput = document.querySelector("#inputPhone");
 const mensagemInput = document.querySelector("#inputMensagem");
 const btnEnviarRecado = document.querySelector("#btnEnviarRecado");
 
+// Recuperando spans de mensagem de erro
+spanNome = document.querySelector("#errorName");
+spanEmail = document.querySelector("#errorEmail");
+spanPhone = document.querySelector("#errorPhone");
+spanMensagem = document.querySelector("#errorMensagem");
+
+
 // Prevenindo
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -149,33 +156,87 @@ phoneInput.addEventListener("input", function (e) {
   e.target.value = value;
 });
 
+nomeInput.addEventListener("blur",()=>{
+    if(nomeInput.value.trim() == "" || !nomeInput.value)
+    {
+        spanNome.innerText = "nome não pode ser nulo!!";
+    }
+});
+nomeInput.addEventListener("keydown", () => {
+  spanNome.innerText = "";
+});
+
+
+emailInput.addEventListener("blur",()=>{
+    if(emailInput.value.trim() == "")
+    {
+        spanEmail.innerText = "email não pode ser nulo!!";
+    }
+    else if (!emailRegex.test(emailInput.value)) {
+        spanEmail.innerText = "email Inválido";
+    }
+});
+emailInput.addEventListener("keydown", () => {
+  spanEmail.innerText = "";
+});
+
+phoneInput.addEventListener("blur",()=>{
+    if(phoneInput.value.trim() == "")
+    {
+        spanPhone.innerText = "telefone não pode ser nulo!!";
+    }
+    else if (phoneInput.value.length < phoneLength) {
+        spanPhone.innerText = "telefone Inválido";
+    }
+});
+phoneInput.addEventListener("keydown", () => {
+  spanPhone.innerText = "";
+});
+
+mensagemInput.addEventListener("blur",()=>{
+    if(mensagemInput.value.trim() == "")
+    {
+        spanMensagem.innerText = "mensagem não pode ser nula!!";
+    }
+});
+mensagemInput.addEventListener("keydown", () => {
+  spanMensagem.innerText = "";
+});
+
+
 btnEnviarRecado.addEventListener("click", function () {
     camposVazios = "";
     valid = true;
     if (!nomeInput.value || nomeInput.value.trim() == "") {
         camposVazios += "- NOME\n";
         valid = false;
+        spanNome.innerText = "nome não pode ser nulo!!"
     }
 
     if (!emailInput.value || emailInput.value.trim() == "") {
         camposVazios += "- EMAIL\n";
         valid = false;
+        spanEmail.innerText = "email não pode ser nulo!!"
     }else if (!emailRegex.test(emailInput.value)) {
         alert("Por favor, insira um email válido.");
         valid = false;
+        spanEmail.innerText = "email Inválido"
     }
 
     if (!phoneInput.value || phoneInput.value.trim() == "") {
         camposVazios += "- TELEFONE\n";
         valid = false;
+        spanPhone.innerText = "telefone não pode ser nulo!!"
     } else if (phoneInput.value.length < phoneLength) {
         alert("Telefone invalido!");
         valid = false;
+        spanPhone.innerText = "telefone Inválido"
     }
 
     if (!mensagemInput.value || mensagemInput.value.trim() == "") {
         camposVazios += "- MENSAGEM\n";
         valid = false;
+        spanMensagem.innerText = "mensagem não pode ser nula!!"
     }
 
     if (camposVazios.length > 0) {

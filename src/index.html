@@ -164,23 +164,28 @@
         <div class="container06">
             <form class="colorful-form">
                 <h1>Mande um recado para nós</h1>
+                <span class="obrigatorio">* campos obrigatórios</span>
                 <div class="form-group">
-                    <label class="form-label" for="name">Name:</label>
+                    <label class="form-label" for="name">Name:<span class="obrigatorio">*</span></label>
                     <input id="inputNome" placeholder="Digite seu nome" class="form-input" type="text">
+                    <span class="errorMessage" id="errorName"></span>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="email">Email:</label>
+                    <label class="form-label" for="email">Email:<span class="obrigatorio">*</span></label>
                     <input id="inputEmail" placeholder="Digite seu email" class="form-input" name="email" id="email"
                         type="email">
+                    <span class="errorMessage" id="errorEmail"></span>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="phone">Telefone:</label>
+                    <label class="form-label" for="phone">Telefone:<span class="obrigatorio">*</span></label>
                     <input type="tel" id="inputPhone" placeholder="(xx) xxxxx-xxxx">
+                    <span class="errorMessage" id="errorPhone"></span>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="message">Mensagem:</label>
+                    <label class="form-label" for="message">Mensagem:<span class="obrigatorio">*</span></label>
                     <textarea id="inputMensagem" placeholder="Escreva sua Mensagem" class="form-input" name="message"
                         id="message"></textarea>
+                    <span class="errorMessage" id="errorMensagem"></span>
                 </div>
                 <button class="form-button" id="btnEnviarRecado" type="submit">Enviar</button>
             </form>

@@ -282,6 +282,9 @@ nav a:hover {
 
 .form-group {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
 
 .form-label {
@@ -386,6 +389,22 @@ footer {
     cursor: pointer;
 }
 
+#inputPhone {
+    width: 10em;
+}
+
+.errorMessage{
+    color: red;
+    font-size: 0.8em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.obrigatorio{
+    color: red;
+    font-size: 0.9em;
+}
+
 #carrosselImgElement {
     transition: opacity 3.5s ease;
     width: 28em;
@@ -406,7 +425,7 @@ footer {
     width: auto;
     padding: 13.4em 0.7em;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.549);
 }
 
 .seta-direita {
