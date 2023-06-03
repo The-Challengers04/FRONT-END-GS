@@ -8,7 +8,9 @@ const btnEntrar = document.querySelector("input[value='Entrar']");
 usuariosRegistrados = [
     {
         "usuario":"Admin",
-        "senha":"123456"
+        "senha":"123456",
+        "nome":"Administrador",
+        "Avatar":"./img/AvatarADM.png" // Endereço referente ao caminho partindo da index
     }
 ]
 
@@ -25,15 +27,24 @@ btnEntrar.addEventListener("click", () => {
     let usuario = inputUsuario.value;
     let senha = inputSenha.value;
     const usuariosRegistrados = JSON.parse(localStorage.getItem("Usuarios"));
-    usuarioEncontrado = false
+    usuarioEncontrado = false // Variável para identificar se o usuario é válido 
+    usuarioLogado = null // Variável para armazenar o usuario se o o login for validado
     for(let i = 0; i < usuariosRegistrados.length; i++){
         if(usuariosRegistrados[i].usuario == usuario && usuariosRegistrados[i].senha == senha){
             usuarioEncontrado = true;
+            usuarioLogado = {
+                "usuario":usuariosRegistrados[i].usuario,
+                "nome":usuariosRegistrados[i].nome,
+                "Avatar":usuariosRegistrados[i].Avatar
+            };
             break;
         }
     }
     if (usuarioEncontrado) {
         alert("Login efetuado com sucesso!");
+
+        // Adicionando usuario ao localStorage
+        localStorage.setItem("UsuarioLogado",JSON.stringify(usuarioLogado));
         // Mude de pagina apos 2 segundos
         setTimeout(() => {
             window.location.href = "../index.html";

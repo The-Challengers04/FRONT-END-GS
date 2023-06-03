@@ -37,46 +37,49 @@ nav {
     z-index: -1;
 }
 
-.nav_left>img{
+.nav_left>img {
     height: 60px;
 }
 
-.nav_rigth_icones ul{
+.nav_rigth_icones ul {
     display: flex;
     text-align: center;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 
-.nav_rigth_icones ul li{
+.nav_rigth_icones ul li {
     font-size: 1.2em;
     margin: 10px;
-    color: var(--cor-branca);    
+    color: var(--cor-branca);
 }
-nav a{
-    color:var(--cor-branca);
+
+nav a, label {
+    color: var(--cor-branca);
 }
+
 nav a:hover {
     color: #ccc;
 }
 
 /* Menu !!!!!!!!!!!!!!!!!!!!!!! */
 
-.container_menu{
+.container_menu {
     background-image: url(../img/img-fundo-smartgrow.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
 
-.titulo_menu{
+.titulo_menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
     margin: 10px;
 }
-.titulo_menu h1{
+
+.titulo_menu h1 {
     font-weight: 400;
     font-size: 4.2em;
     line-height: 97px;
@@ -89,7 +92,7 @@ nav a:hover {
 
 /* Seção  01 */
 
-.container01{
+.container01 {
     background-color: var(--cor-branca);
     display: flex;
     flex-direction: column;
@@ -100,34 +103,39 @@ nav a:hover {
     padding: 40px;
 }
 
-.container01 h1{
+.container01 h1 {
     font-size: 2.5em;
     color: var(--cor-primaria);
 }
 
-.container01 p{
+.container01 p {
     color: var(--cor-fonte-text);
     font-size: 1.4em;
     margin: 10px 200px;
 }
-.container01 div ul{
+
+.container01 div ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 20px;
 }
-.container01 div ul li{
+
+.container01 div ul li {
     padding: 20px;
 }
-.container01 div i{
+
+.container01 div i {
     color: var(--cor-primaria);
     font-size: 2.5em;
 }
-.container01 div h3{
+
+.container01 div h3 {
     font-size: 2em;
-    color:var(--cor-primaria);
+    color: var(--cor-primaria);
 }
-.container01 div p{
+
+.container01 div p {
     color: var(--cor-fonte-text);
     font-size: 1.4em;
     margin: 10px 20px;
@@ -136,19 +144,20 @@ nav a:hover {
 }
 
 /* Seção 02 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.container02{
+.container02 {
     background-color: var(--cor-primaria);
     padding: 50px;
-   
+
 }
-.container02 h1{
+
+.container02 h1 {
     font-size: 2.5em;
     color: var(--cor-branca);
     text-align: center;
     padding: 20px;
 }
 
-.container02 div{
+.container02 div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     display: flex;
@@ -156,16 +165,18 @@ nav a:hover {
     align-items: center;
 }
 
-.container02 div p{
+.container02 div p {
     color: var(--cor-branca);
     font-size: 1.4em;
     margin: 10px 50px;
 }
-.container02 div video{
+
+.container02 div video {
     margin: 0px 50px;
 }
+
 /* Seão 03 !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.container03{
+.container03 {
     background-color: var(--cor-branca);
     display: flex;
     flex-direction: column;
@@ -177,20 +188,22 @@ nav a:hover {
     padding: 40px;
 }
 
-.container03 h1{
+.container03 h1 {
     font-size: 2.5em;
     color: var(--cor-primaria);
     text-align: center;
     padding: 40px;
 }
-.container03 p{
+
+.container03 p {
     color: var(--cor-fonte-text);
     font-size: 1.4em;
     margin: 10px 20px;
     padding: 20px;
 }
+
 /* Seção 04 !!!!!!!!!!!!!!!!!!!!!!!! */
-.container04{
+.container04 {
     background-color: var(--cor-primaria);
     display: flex;
     flex-direction: column;
@@ -201,12 +214,13 @@ nav a:hover {
     padding: 40px;
 }
 
-.container04 h1{
+.container04 h1 {
     font-size: 2.5em;
     color: var(--cor-branca);
     text-align: center;
     padding: 40px;
 }
+
 .container04 ul {
     display: flex;
     flex-direction: column;
@@ -214,31 +228,35 @@ nav a:hover {
     gap: 10px;
     margin: 5px 200px;
 }
-.container04 ul li{
+
+.container04 ul li {
     background-color: var(--cor-branca);
     padding: 40px;
 }
 
-.container04 ul li p{
+.container04 ul li p {
     color: var(--cor-fonte-text);
     font-size: 1.5em;
 }
+
 /* Seção 05 !!!!!!!!!!!!!!!!!!!!! */
-.container05{
+.container05 {
     background-color: var(--cor-branca);
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-    gap:10px;
+    gap: 10px;
     padding: 40px;
 }
-.container05{
+
+.container05 {
     color: var(--cor-fonte-text);
 }
+
 /* Seção 06 !!!!!!!!!!!!!!!!!!!!!!! */
-.container06{
+.container06 {
     background-color: var(--cor-primaria);
     display: flex;
     flex-direction: column;
@@ -249,57 +267,59 @@ nav a:hover {
 }
 
 .colorful-form {
-  width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--cor-back-secundario);
-  border-radius: 10px;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--cor-back-secundario);
+    border-radius: 10px;
 }
-.colorful-form h1{
+
+.colorful-form h1 {
     color: var(--cor-fonte-title);
     padding: 30px;
     text-align: center;
 }
+
 .form-group {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .form-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: var(--cor-fonte-title);
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--cor-fonte-title);
 }
 
 .form-input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background-color: var(--cor-branca);
-  color: var(--cor-fonte-text);
-  border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--cor-branca);
+    color: var(--cor-fonte-text);
+    border-radius: 5px;
 }
 
 textarea.form-input {
-  height: 100px;
+    height: 100px;
 }
 
 .form-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: var(--cor-primaria);
-  color: var(--cor-branca);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .form-button:hover {
-  background-color: var(--cor-branca);
-  color: var(--cor-primaria);
-  border: 2px solid var(--cor-primaria);
+    background-color: var(--cor-branca);
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
 }
 
 /* Footer !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -364,32 +384,57 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  #carrosselImgElement{
+#carrosselImgElement {
     transition: opacity 3.5s ease;
     width: 28em;
     height: auto;
     object-fit: cover;
-  }
+}
 
-  .carrossel {
+.carrossel {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-  }
-  .seta-direita,
-  .seta-esquerda{
+}
+
+.seta-direita,
+.seta-esquerda {
     height: 100%;
     width: auto;
     padding: 13.4em 0.7em;
     position: relative;
     background-color: rgba(255, 255, 255, 0.55);
-  }
-.seta-direita{
+}
+
+.seta-direita {
     right: 2em;
 }
-.seta-esquerda{
+
+.seta-esquerda {
     left: 2em;
+}
+
+#divUsuario {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+#divUsuario > a {
+/*Centralizar a ancora na coluna*/
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+#divUsuario > img {
+    width: auto;
+    margin-top: 10%;
+    height: 50%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-color: #000;
 }
