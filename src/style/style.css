@@ -352,3 +352,44 @@ footer {
     margin-top: 20px;
     color: var(--cor-fonte-text);
 }
+
+#darkModeBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #carrosselImgElement{
+    transition: opacity 3.5s ease;
+    width: 28em;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .seta-direita,
+  .seta-esquerda{
+    height: 100%;
+    width: auto;
+    padding: 13.4em 0.7em;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.55);
+  }
+.seta-direita{
+    right: 2em;
+}
+.seta-esquerda{
+    left: 2em;
+}
