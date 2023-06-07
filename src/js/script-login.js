@@ -5,17 +5,6 @@ const inputUsuario = document.querySelector("#usuario");
 const inputSenha = document.querySelector("#senha");
 const btnEntrar = document.querySelector("input[value='Entrar']");
 
-usuariosRegistrados = [
-    {
-        "usuario":"Admin",
-        "senha":"123456",
-        "nome":"Administrador",
-        "Avatar":"./img/AvatarADM.png" // Endereço referente ao caminho partindo da index
-    }
-]
-
-
-localStorage.setItem("Usuarios",JSON.stringify(usuariosRegistrados));
 
 // Prevenindo
 form.addEventListener("submit", (e) => {
@@ -26,30 +15,15 @@ form.addEventListener("submit", (e) => {
 btnEntrar.addEventListener("click", () => {
     let usuario = inputUsuario.value;
     let senha = inputSenha.value;
-    const usuariosRegistrados = JSON.parse(localStorage.getItem("Usuarios"));
-    usuarioEncontrado = false // Variável para identificar se o usuario é válido 
-    usuarioLogado = null // Variável para armazenar o usuario se o o login for validado
-    for(let i = 0; i < usuariosRegistrados.length; i++){
-        if(usuariosRegistrados[i].usuario == usuario && usuariosRegistrados[i].senha == senha){
-            usuarioEncontrado = true;
-            usuarioLogado = {
-                "usuario":usuariosRegistrados[i].usuario,
-                "nome":usuariosRegistrados[i].nome,
-                "Avatar":usuariosRegistrados[i].Avatar
-            };
-            break;
-        }
-    }
-    if (usuarioEncontrado) {
+    
+    if(usuario === "Admin" && senha == "123456"){
         alert("Login efetuado com sucesso!");
-
-        // Adicionando usuario ao localStorage
-        localStorage.setItem("UsuarioLogado",JSON.stringify(usuarioLogado));
-        // Mude de pagina apos 2 segundos
+        // Mude de pagina apos 1 segundos
         setTimeout(() => {
-            window.location.href = "../index.html";
-        }, 2000);
-    } else {
+            window.location.href = "https://www.unicef.org/brazil/comunicados-de-imprensa/relatorio-da-onu-numeros-globais-de-fome-subiram-para-cerca-de-828-milhoes-em-2021";
+        }, 1000);
+    }
+    else {
         alert("Usuário ou senha inválidos!");
     }
 });

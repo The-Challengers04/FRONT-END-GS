@@ -24,33 +24,6 @@ function toggleMenu(event) {
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
-// Verificar se o usuário esta logado
-// Se estiver deve aparece o ícone junto com seu nome em baixo
-divUsuario = document.querySelector("#divUsuario");
-usuarioLogado = localStorage.getItem("UsuarioLogado");
-if (usuarioLogado == null) // O usuario não esta logado 
-{
-  //<a href="./pages/login.html">Login</a>
-  btnLogin = document.createElement("a");
-  btnLogin.href = "./pages/login.html";
-  btnLogin.textContent = "Login";
-  divUsuario.appendChild(btnLogin);
-}
-else // O usuario esta logado
-{
-  usuarioLogado = JSON.parse(usuarioLogado);
-  avatarUser = document.createElement("img");
-  avatarUser.src = usuarioLogado.Avatar;
-  avatarUser.alt = "Avatar do usuário";
-  avatarUser.name = "avatarUser"
-  avatarUser.classList.add("avatar");
-  nomeUser = document.createElement("label");
-  nomeUser.textContent = usuarioLogado.nome;
-  nomeUser.for = avatarUser.name
-  divUsuario.appendChild(avatarUser);
-  divUsuario.appendChild(nomeUser);
-}
-
 
 // ==================== CARROSSEL =========================
 // Localizando elementos do HTML
