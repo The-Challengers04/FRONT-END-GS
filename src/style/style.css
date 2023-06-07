@@ -27,14 +27,18 @@ body {
 
 
 /* Nav !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
+#btn-mobile {
+    display: none;
+}
+#nav {
+    display: none;
+}
 nav {
     height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: transparent;
-    z-index: -1;
 }
 
 .nav_left>img {
@@ -111,7 +115,7 @@ nav a:hover {
 .container01 p {
     color: var(--cor-fonte-text);
     font-size: 1.4em;
-    margin: 10px 200px;
+    margin: 10px 100px;
 }
 
 .container01 div ul {
@@ -122,7 +126,7 @@ nav a:hover {
 }
 
 .container01 div ul li {
-    padding: 20px;
+    padding: 5% 0px;
 }
 
 .container01 div i {
@@ -167,11 +171,13 @@ nav a:hover {
 
 .container02 div p {
     color: var(--cor-branca);
-    font-size: 1.4em;
-    margin: 10px 50px;
+    font-size: 1.1em;
+    margin: 10px 30px;
 }
 
 .container02 div video {
+    width:50%;
+    height: 300px;
     margin: 0px 50px;
 }
 
@@ -226,7 +232,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    margin: 5px 200px;
+    margin: 5px 10%;
 }
 
 .container04 ul li {
@@ -248,7 +254,6 @@ nav a:hover {
     text-align: center;
     align-items: center;
     gap: 10px;
-    padding: 40px;
 }
 
 .container05 {
@@ -267,7 +272,7 @@ nav a:hover {
 }
 
 .colorful-form {
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: var(--cor-back-secundario);
@@ -456,4 +461,225 @@ footer {
     border-radius: 50%;
     margin-bottom: 10px;
     background-color: #000;
+}
+
+/* DARK MODE*/
+.dark-mode .layout{
+    background: black;
+}
+.dark-mode .container01{
+    background-color: black;
+}
+.dark-mode .container01 p{
+    color: white;
+}
+.dark-mode .container02{
+    background-color: #005327;
+}
+.dark-mode .container03{
+    background-color: black;
+}
+.dark-mode .container03 p{
+    color: white;
+}
+.dark-mode .container04{
+    background-color: #005327;
+}
+.dark-mode .container04 li{
+    background-color: black;
+}
+.dark-mode .container04 li p{
+    color: white;
+}
+.dark-mode .container05 {
+    background-color: black;
+}
+.dark-mode .container05 figcaption{
+    color: white;
+}
+.dark-mode .container06 {
+    background-color: #005327;
+}
+.dark-mode .container06 form{
+    background-color: black;
+}
+.dark-mode .container06 form h1{
+    color: white;
+}
+.dark-mode .container06 form label{
+    color: white;
+}
+.dark-mode #darkModeBtn{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 1000px) {
+    .container01 div ul{
+        flex-direction: column;
+    }
+    .container02 div{
+        flex-direction: column;
+    }
+    .container02 div video {
+        width: 60%;
+        height: 40%;
+    }
+}
+@media (max-width: 600px) {
+    #nav {
+        display: flex;
+    }
+    .nav_rigth_icones {
+        display: none;
+    }
+    .layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background: white;
+        z-index: 1000;
+        visibility: hidden;
+    }
+    #nav.active .layout {
+        visibility: visible;
+        overflow-y: auto;
+        top: 90px;
+        border-radius: 5%;
+        width: 100%;
+        padding: 20px;
+        left: 0px;
+    }
+    .layout>a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        color: var(--cor-fonte-text);
+    }
+    /* Buttom mobile ativado */
+    #btn-mobile {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 1rem;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: white;
+        background-color: #00000000;
+    }
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 6px;
+        transition: 0.3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -8px;
+    }
+    .titulo_menu{
+        display: flex;
+    }
+    .titulo_menu h1{
+        font-size: 3.5em;
+        line-height: 70px;
+        letter-spacing: 0px;
+        margin: 20px 0px;
+    }
+    .container01{
+        padding: 20px 0px;
+    }
+    .container01 p{
+        padding: 20px 0px;
+        margin: 0px 10px;
+    }
+    .container01 h1{
+        font-size: 30px;
+    }
+    .container01 div h3{
+        font-size: 1rem;
+    }
+    .container01 div ul{
+        flex-direction: column;
+    }
+    .container01 div p{
+        font-size: 15px;
+        margin: 5px 0px;
+    }
+    .container02{
+        padding: 30px 10px;
+    }
+    .container02 div{
+        flex-direction: column;
+    }
+    .container02 div p{
+        margin: 50px 10px;
+    }
+    .container02 div video{
+        width: 100%;
+    }
+    .container03 h1{
+        font-size: 2em;
+        padding: 20px;
+    }
+    .container03 img{
+        width: 100%;
+    }
+    .container03 p{
+        font-size: 1em;
+        margin: 10px 10px;
+        padding: 0px;
+    }
+    .container04{
+        padding: 0px;
+    }
+    #carrosselImgElement {
+        transition: opacity 3.5s ease;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .carrossel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    .seta-direita,
+    .seta-esquerda {
+        height: 100%;
+        width: auto;
+        padding: 1em 0.7em;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.549);
+    }
+    
+    .seta-direita {
+        right: 2em;
+    }
+    
+    .seta-esquerda {
+        left: 2em;
+    }
+    .container06{
+        padding: 30px 10px;
+    }
 }

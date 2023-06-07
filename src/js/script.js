@@ -1,5 +1,28 @@
 // Alerta de Seja bem-vindo
-alert("Seja bem-vindo");
+// Obtém a data e hora atual
+var dataAtual = new Date();
+
+// Formata a data e a hora
+var dataFormatada = dataAtual.toLocaleDateString();
+var horaFormatada = dataAtual.toLocaleTimeString();
+
+// Cria a mensagem do alerta
+var mensagem = "\nData: " + dataFormatada + "\nHora: " + horaFormatada;
+
+// Exibe o alerta
+alert("Seja bem-vindo" + mensagem);
+// menuBars();
+const btnMobile = document.getElementById('btn-mobile');
+const link_nav = document.getElementsByClassName('link_nav');
+function toggleMenu(event) {
+    if (event.type === 'touchstart') event.preventDefault();
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
+    const active = nav.classList.contains('active');
+}
+
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
 
 // Verificar se o usuário esta logado
 // Se estiver deve aparece o ícone junto com seu nome em baixo
@@ -27,8 +50,6 @@ else // O usuario esta logado
   divUsuario.appendChild(avatarUser);
   divUsuario.appendChild(nomeUser);
 }
-
-
 
 
 // ==================== CARROSSEL =========================
@@ -274,7 +295,19 @@ btnEnviarRecado.addEventListener("click", function () {
 const darkModeBtn = document.getElementById("darkModeBtn");
 const body = document.body;
 
+const container01 = document.getElementById('oque')
+
+
 darkModeBtn.addEventListener("click", function () {
   // Alterar a cor de fundo da pagina
   body.classList.toggle("dark-mode");
+
+  darkModeBtn.classList.toggle("dark-mode");
+  
+  // Atualizar o texto do botão com base no modo atual
+  if (body.classList.contains('dark-mode')) {
+    darkModeBtn.textContent = 'Modo Claro';
+  } else {
+    darkModeBtn.textContent = 'Modo Escuro';
+  }
 });
