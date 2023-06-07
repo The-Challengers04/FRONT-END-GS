@@ -51,6 +51,7 @@ else // O usuario esta logado
   divUsuario.appendChild(nomeUser);
 }
 
+
 // ==================== CARROSSEL =========================
 // Localizando elementos do HTML
 const setaEsquerda = document.querySelector(".seta-esquerda");
@@ -293,11 +294,14 @@ btnEnviarRecado.addEventListener("click", function () {
 // DARK MODE
 const darkModeBtn = document.getElementById("darkModeBtn");
 const body = document.body;
+
 const container01 = document.getElementById('oque')
+
 
 darkModeBtn.addEventListener("click", function () {
   // Alterar a cor de fundo da pagina
   body.classList.toggle("dark-mode");
+
   darkModeBtn.classList.toggle("dark-mode");
   
   // Atualizar o texto do botão com base no modo atual
