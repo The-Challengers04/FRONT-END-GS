@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* Cores e fontes usadas */
 
 :root {
@@ -118,10 +120,13 @@ nav a:hover {
     margin: 10px 100px;
 }
 
+.container01 div{
+    display: flex;
+    justify-content: space-between;
+}
 .container01 div ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     margin: 20px;
 }
 
@@ -137,14 +142,13 @@ nav a:hover {
 .container01 div h3 {
     font-size: 2em;
     color: var(--cor-primaria);
+    font-family: Roboto;
 }
 
 .container01 div p {
     color: var(--cor-fonte-text);
     font-size: 1.4em;
-    margin: 10px 20px;
-    padding: 20px;
-
+    margin: 5px 30px;
 }
 
 /* Seção 02 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */

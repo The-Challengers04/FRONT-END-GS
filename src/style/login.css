@@ -15,7 +15,7 @@ body {
     background-image: url(../img/img-fundo-smartgrow.jpg);
     background-size: auto 100%;
     background-repeat: no-repeat;
-    background-position: -500px;
+    background-position: -200px;
 }
 
 fieldset{
@@ -46,8 +46,8 @@ fieldset{
 }
 
 .logo {
-    width: 10em;
-    height: 8em;
+    width: 25em;
+    height: 18em;
 }
 
 .arrowLeft {
