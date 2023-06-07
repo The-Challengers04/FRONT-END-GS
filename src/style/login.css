@@ -1,0 +1,213 @@
+:root {
+    --cor-primaria: #25995C;
+    --cor-branca: #ffffff;
+    --cor-fonte-title: #4B4B4B;
+    --cor-fonte-text: #646464;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/img-fundo-smartgrow.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: -500px;
+}
+
+fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    display: flex;
+}
+
+.container-left {
+    width: 50%;
+}
+
+#img-left {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.container-rigth {
+    width: 50%;
+    z-index: 100;
+    height: 100vh;
+    background-color: white;
+}
+
+.logo {
+    width: 10em;
+    height: 8em;
+}
+
+.arrowLeft {
+    color: rgb(101, 207, 248);
+    transition: 2ms linear;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.arrowLeft:hover {
+    color: #637288;
+}
+
+.formInicial {
+    background-color: #637288;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    margin: 50px 0;
+    height: 100vh;
+}
+
+.formGroupInicial {
+    position: relative;
+    padding: 15px 0 0;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1rem;
+    color: #383838b4;
+    padding: 7px 0;
+    background: transparent;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 1rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #383838b4;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #383838b4;
+    font-weight: 700;
+}
+
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+.caixa-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.formLogin {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.labelInput {
+    padding: 30px 0px 0px 0px;
+}
+
+.enviar {
+    margin: 20px auto 10px auto;
+    padding: 20px 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border: solid 1px #fff;
+    text-decoration: none;
+}
+
+.enviar:hover {
+    color: var(--cor-primaria);
+    background-color: #fff;
+    border: solid 1px var(--cor-primaria);
+    transition: 0.2s linear;
+}
+
+.tituloForm {
+    text-align: center;
+    font-size: 21px;
+    padding: 30px 0px 30px 0px;
+    color: var(--cor-fonte-text);
+}
+
+.paragrafoForm {
+    text-align: center;
+}
+
+.formLogin .labelInput {
+    display: block;
+}
+
+.formLogin .inputEmail,
+.formLogin .inputSenha {
+    display: block;
+}
+
+.formLogin .link1,
+.formLogin .link2 {
+    display: block;
+    color: var(--cor-primaria);
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#eye{
+    position: absolute;
+    top: 1.5em;
+    right: 0.4em;
+    cursor: pointer;
+    color: #272262;
+  }
+@media (max-width: 600px) {
+    .container-left {
+        display: none;
+    }
+    .container-rigth {
+        width: 100%;
+    }
+}
